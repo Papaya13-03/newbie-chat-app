@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100vw;
+            height: 100vh;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: violet; */
+        }
+        #root {
+            width: 500px;
+            height: 800px;
+            background-color: lightseagreen;
+            position: relative;
+            border-radius: 20px;
+        }
+        h1{
+            height: 80px;
+            line-height: 80px;
+            display: inline-block;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+        }
+        #message {
+            height: 600px;
+            width: 470px;
+            margin: 70px 15px 0 15px;
+            background-color: #fff;
+            border-radius: 20px;
+            overflow-y: scroll;
+            padding: 20px;
+        }
+
+        #message ul{
+            font-size: 20px;
+            list-style: none;
+            width: 100%;
+        }
+        #message li{
+            margin: 5px 0;
+            display: block;
+            max-width: 100%;
+        }
+        #boxx {
+            position: relative;
+            margin-top: 20px;
+            width: 470px;
+            height: 60px;
+            padding: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="home_qwerty"></div>
+    <div id="root">
+        <h1>Chat App</h1>
+        <div id="message">
+            <ul>
+
+            </ul>
+        </div>
+        <div id="box_chat">
+            <input type="text" id="boxx" placeholder="Send a message">
+        </div>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./client.js"></script>
+</html>

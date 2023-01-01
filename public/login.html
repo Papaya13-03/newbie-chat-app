@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        form {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        input {
+            margin:10px;
+            width: 300px;
+            height: 50px;
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="login_qwerty"></div>
+    <div id="root">
+        <form action="" id="form" method="">
+            <input type="username" id = "input1" class="text_box" placeholder="username">
+            <input type="password" id = "input2" class="text_box" placeholder="password">
+            <input type="submit"  id="submit">
+        </form>
+    </div>
+</body>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./client.js"></script>
+    
+</html>
