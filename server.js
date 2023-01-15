@@ -17,7 +17,7 @@ io.on('connection', (socket)=>{
     })
 })
 
-app.use(express.static('public'));
+app.use('/public',express.static('public'));
 
 // body-parser
 app.use(bodyParser.urlencoded({ extended: false }))
