@@ -17,7 +17,7 @@ io.on('connection', (socket)=>{
     })
 })
 
-app.use('/public',express.static('public'));
+app.use('/',express.static('public'));
 
 // body-parser
 app.use(bodyParser.urlencoded({ extended: false }))
@@ -50,11 +50,11 @@ app.post('/login/v1',checkValidUser,(req, res)=>{
 })
 
 app.get('/login',(req, res)=>{
-    res.sendFile(__dirname + '/public/login.html');
+    res.sendFile(__dirname + '/public/HTML/login.html');
 })
 
 app.get('/',(req, res)=>{ 
-    res.sendFile(__dirname + "/public/home.html");
+    res.sendFile(__dirname + "/public/HTML/home.html");
 })
 
 server.listen(3000)
